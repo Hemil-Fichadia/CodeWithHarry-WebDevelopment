@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow functions tutorial
+    </div>
+
+    <script>
+        // function greet(){
+        //     console.log("Good Morning");
+        // }
+        // greet(); 
+
+        // Arrow Function 
+        // let greet = ()=> {
+        //     console.log("Good Morning!");
+        // } 
+        // writing greet function using arrow function shortened
+        // the empty parenthisis reprensents function so it mandatory to put ().
+        let greet = () => console.log("Good Morning");
+
+        // This is sum function created uding arrow function
+        // let sum = (a,b) =>{
+        //     return a+b;
+        // };
+        
+        // shorthand of arrow function 
+        // These functions can be called from console using command 
+        let sum = (a,b) => a+b;
+        let half = a => a/2;
+        
+        greet();
+
+        // This is shorthand of writing a function
+        /* Here the ()=> this arrow function is working like a defined function that is used to be passed as argument which is defined outside the scope of setTimeout */
+        // timeOut = setTimeout( () => {console.log("We are inside setTimeout")}, 3000);
+        setTimeout(() => {
+            console.log("We are inside setTimeout"); 
+        }, 3000);
+
+
+
+         // here "this" points to obj1 coz the arrow function directly takes it to the object but if "this" was defined in a function inside forEach loop so it won't be able to find  outer object it only searches inside the scope of the function if it was written like  this.names.forEach(function s(students)=>{ console.log(this.greetings + "Kookdoo Koo" + students)});
+        let obj1 = {
+            greetings: "Good Morning",
+            names: ["Hemil", "Amit", "Ronak", "Mittal"],
+            speak(){
+
+                /* Here keyword "this" needs to be mentioned as the variable greetings and array names both are defined outside the scope of the speak function so speak function won't be able to catch those stuffs those are declared outside its scope. But here the speak function itself is defined in a scope of an object so we only need to handover that particular object which suppose to include those stuffs and the keyword "this" does this particularly.   */
+
+                this.names.forEach((students) => {
+                    
+                    /* something weired happens here according to scoping, the keyword "this" inside a function is only able to find object defined in its scope nothing escapes it, but here it is an arrow function so it allows the keyword "this" inside the console.log function and which is even inside the scope of forEach loop to directly access the "this" outside its scope which is actually pointing to the object obj1. But istead of arrow function, any normal function was defined, the this wouldn't be able to find the outside "this" of obj1 so console.log would display undifined inplace of it. Inshort if an arrow function is used, the "this" directly points to "this" of its parent, in this case it is obj1 but if a normal function is used it will only search inside its scope. */
+                   
+                    console.log(this.greetings + "Kookdoo Koo " + students);  
+                });
+            }
+        }
+        // speak function inside obj1 is called.
+        obj1.speak();
+
+
+    </script>
+</body>
+</html>

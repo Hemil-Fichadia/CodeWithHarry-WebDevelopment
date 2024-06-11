@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiblity and Z-Index</title>
+    <style>
+        .box{
+            width:110px;
+            height:110px;
+            border:2px solid black;
+        }
+        #box1{
+            background-color:green;
+            position:relative;
+            top:49px;
+            z-index:49;
+        }
+        /* the higher value of z-index will decide which box will be shown stack upward  */
+        #box2{
+            background-color: red;
+            /* default value of visblity is visible */
+            /* z-index will only work for position relative , absolute , fixed or sticky */
+            z-index:-1;
+            /* visibility:hidden; will hide the element and leave the space of it */
+            /* display:none; will hide element and space as well*/
+            position:relative;
+            top:14px;
+            }
+        #box3{background-color:blue;}
+        #box4{background-color:yellow;}
+    </style>
+</head>
+<body>
+    <!-- Emmett command to create multiple boxes with same class and diffrent but sequential ids ==> div.box#box$ -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

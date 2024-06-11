@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after Pseudo selectors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+TC&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        /* This is a before pseudo selector which inserts the content before the main content of the element which is being targetted. */
+        header::before{
+            background:url('https://source.unsplash.com/user/erondu/1600x900');
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            z-index:-1;
+            opacity:0.3;
+        }
+
+        .navigation {
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        h1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        section {
+            height: 244px;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /*this property is used to align content in center,even vertically */
+        }
+
+        /* This is a after pseudo selector which inserts the content after the main content of the element which is being targetted. */
+        /* section::after{
+            content:"this is a content"
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="items">Home</li>
+                <li class="items">About</li>
+                <li class="items">Services</li>
+                <li class="items">Conatact Us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>Welcome to Coding World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat voluptas voluptate nam consequuntur
+                sequi ducimus placeat libero ex, exercitationem delectus eveniet tempore, eum fugit facere perspiciatis
+                nihil. Laboriosam similique a eius vitae aperiam!</p>
+        </section>
+</body>
+
+</html>

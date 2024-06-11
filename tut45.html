@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media quries</title>
+    <style>
+        .container{
+            display:grid;
+            grid-gap:1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+        }
+        @media only screen and (max-width:300px){
+            body{
+                background-color:red;
+            }
+            /* .container{
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer'
+            ;
+            } */
+            aside{
+                display:none;
+            }
+            span{
+                display:block;
+                text-align:center;
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width:500px){
+            body{
+                background-color:blue;
+            }
+            .container{
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer'
+            ;
+            }
+            aside{
+                display:none;
+            }
+            span{
+                display:block;
+                text-align:center;
+            }
+        }
+        @media(min-width:500px) and (max-width:800px){
+            body{
+                background-color:yellow;
+            }
+            .container{
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer'
+            ;
+            }
+            span{
+                display:block;
+                text-align:center;
+            }
+        }
+        @media(min-width:800px){
+            body{
+                background-color:green;
+            }
+        }
+        .bdr{
+            border:2px solid black;
+            background-color:wheat;
+            padding:23px; 
+        }
+        nav{
+            grid-area:navbar;
+        }
+        section{
+            grid-area:section;
+        }
+        aside{
+            grid-area:aside;
+        }
+        footer{
+            grid-area:footer;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <nav class="bdr">
+            <span>Home</span>        
+            <span>About</span>        
+            <span>Services</span>        
+            <span>Contact</span>        
+       </nav>
+       <section class="bdr">
+           <h2>Learn CSS in hindi</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at quis a itaque? Praesentium, officia. Dolores velit illo in veniam, labore id facilis officia adipisci natus? Quibusdam amet ratione ipsa illo quos ipsum quis excepturi fugit laborum voluptates quisquam culpa, non labore optio, iste id doloribus voluptatibus eligendi. Maiores aliquam voluptate sapiente totam adipisci velit odit cupiditate mollitia animi cumque. Suscipit modi voluptatum ex maxime alias tenetur iure vero cumque soluta nemo temporibus debitis expedita voluptatem amet aspernatur accusantium odit, deleniti rerum quis optio sunt minima corporis? Quo quidem libero qui dolorum voluptas expedita dolor voluptatem quos distinctio consectetur magni, tempore officiis inventore placeat quaerat laudantium alias minus fugit! Voluptates esse sequi illo at, nam quia velit magni quaerat deleniti culpa quibusdam in. Vitae, nostrum cupiditate accusamus temporibus eos praesentium corrupti recusandae, repellat reiciendis officia blanditiis? Cupiditate aperiam vero sit?</p>
+       </section>
+       <aside class="bdr">
+           <h1>More about us</h1>
+       </aside>
+   </div> 
+   <footer class="bdr">Code with Hemil 2021</footer>
+</body>
+</html>

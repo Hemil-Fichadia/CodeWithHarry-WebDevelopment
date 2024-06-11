@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+
+        <style>
+            .container{
+                height:544px;
+                width:100%;
+                border:2px solid black;
+                /* initialize the container as a flex box  */
+                display:flex;
+                /* flex properties for flex container */
+                /*(default vlaue of flex direction is row)*/
+                flex-direction:row; 
+                /* flex-direction:column; */
+                /* flex-direction:row-reverse; */
+                /* flex-direction:column-reverse; */
+
+                /* for wrapping of elements in contianer using flex properties , flex-wrap is used which wraps the elements according to screen size of the divce  */
+                /* flex-wrap:wrap; */
+                /* flex-wrap:wrap-reverse; */
+
+                /* flex-flow is a shorthand operation for using flex direction and flex wrap in the same line  */
+                /* flex-flow:row-reverse wrap; */
+
+                /* justify-content:center;  */
+                /*it brings content to the center on the vertical axis of the parent block */
+
+                /* justify-content:space-between; */
+                /*it gives equal sapce between the elements but dosent leaves space in the ends*/
+
+                /* justify-content:space-evenly; */
+                /*it gives equal space between elements and end as well*/
+
+                /* justify-content:space-around; */
+
+                /* align-items:center; */
+                /* align-items:flex-end; */
+                /* align-items:flex-start; */
+                
+                /* This stretch property in align-items, allows inside elements to utilze maximum space possible of the total parent container such a way that they evenly get spaced vertically and when they are wraped they don't overflow and adjust themselves in such a way that it try not to increase the height of the parent container and when the wrap is increased gradually they just decrease the space between them */
+
+                /* align-items:stretch; */
+            }
+            .item{
+                height:150px;
+                width:150px;
+                background-color:tomato;
+                border:2px solid green;
+                margin:10px;
+                padding:3px;
+            }
+
+            #item-1{
+                /* higher the order lower the position is given */
+                /* negative values are not accepted in flex grow or shrink */
+                /* flex grow enables elements to grow and occupy space in parent container such a way that as the display size is increased the flex grow element with higher value occupies the maximum space same for flex shrink */
+                order:1;
+                /* flex-grow:2; */
+
+            }
+            #item-2{
+                order:3;
+                flex-grow:1;
+                /* flex-shrink:3; */
+                /* flex-basis:260px; */
+                /* when flex-direction is set as row row flex basis controls width  */
+                /* when flex-direction is set as column flex basis controls height   */
+            }
+            #item-3{
+                order:4;
+                /* flex shorthand flex:grow shrink basis;  */
+                flex:2 2 270px;
+
+                /* The align-self property of flex aligns elements in three pre-defined positions, start, end and center */
+
+                /* the flex start is default and it aligns the element to its original position  */
+                /* align-self: flex-start; */
+
+                /* similarly flex end takes the element to the ending of the flex box */
+                /* align-self:flex-end; */
+
+                /* flex center, centers the element in the flex box */
+                align-self:center;
+            }
+        </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <!-- Emmett command: div.item#item-$*6 -->
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+</body>
+</html>

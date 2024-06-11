@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and conditional</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = "This is a string";
+        var string1 = "This is a string2";
+        //varaible has global scope so its value can be accessed anywhere
+        console.log(string1);
+        // this variable with let has scope outside this block
+        // let a = "u"; 
+        // {
+        //     let a = "u6";
+        //     console.log(a); //this will print ans u6
+        // }
+        // console.log(a); // this will print ans u
+
+        // const a = "This cannot be changed";
+        // a = "I want to change this.";
+        // console.log(a); 
+
+        // let age = 34;
+        // if(age>18)
+        // {
+        //     console.log("You can drink cold drink");
+        // }
+        // else if(age==12)
+        // {
+        //     console.log("you are not eligible to drink")
+        // }
+        // else
+        // {
+        //     conosle.log("you can drink water")
+        // } 
+
+        const cups = 45;
+        switch (cups) {
+            case 4:
+
+                break;
+            case 41:
+
+                break;
+            case 45:
+                console.log("This is value 45")
+                break;
+
+            default:
+                console.log("This is invalid value")
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

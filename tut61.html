@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is math object tutorial</h1>
+    </div>
+
+    <script>
+        let m = Math;
+        // printing the math object
+        console.log(m);
+        // pirnting some of the pre defined constant values in math object
+        console.log("The value of Math.E is:",Math.E)
+        console.log("The value of Math.LN2 is:",Math.LN2)
+        console.log("The value of Math.LOG10E is:",Math.LOG10E)
+        console.log("The value of Math.PI is:",Math.PI)
+        console.log("The value of Math.SQRT2 is:",Math.SQRT2)
+        // E: 2.718281828459045
+        // LN2: 0.6931471805599453
+        // LN10: 2.302585092994046
+        // LOG2E: 1.4426950408889634
+        // LOG10E: 0.4342944819032518
+        // PI: 3.141592653589793
+        // SQRT1_2: 0.7071067811865476
+        // SQRT2: 1.4142135623730951
+
+        // printing some of the functions from Math object
+        let a = 34.4563;
+        let b = 89;
+
+        console.log("The value of a and b is", a, b);
+        console.log("The rounded value of a and b is", Math.round(a), Math.round(b));
+
+        // Power Function
+        console.log("The value of 3 raise to 2 is", Math.pow(3, 2));
+
+        // square root function
+        console.log("The square root of 36 is", Math.sqrt(36));
+
+        // ceil and floor functions
+        console.log("The ceil of 5.8 is", Math.ceil(5.8));
+        console.log("The floor value of 5.8 is", Math.floor(5.8));
+
+        // Absolute function
+        console.log("The absolute value of 5.66 is", Math.abs(5.66));
+        console.log("The absolute value of  -5.66 is", Math.abs(-5.66));
+
+        // Trrigonometric functions
+        console.log("The value of sin(pi/2) is", Math.sin(Math.PI/2));
+        console.log("The value of cos(pi/2) is", Math.cos(Math.PI/2));
+        console.log("The value of tan(pi/2) is", Math.tan(Math.PI/2));
+
+        //Min and Max function
+        console.log("Minimum value of (4,5,6,7,8) is", Math.min(4,5,6,7,8));
+        console.log("Maximum value of (12,14,21,13) is", Math.max(12,14,21,13));
+
+        // Generating a random number Math.random() function generates a random number between 0 and 1
+        let r = Math.random();
+        console.log("The random number is ", r);
+        // Random number between (a,b) = a + (b-a)*Math.random
+        let a1 = 1;
+        let b1 = 100;
+        let r1 = a1 + (b1-a1) * Math.random();
+        // This relation will return a floating number, so for getting exact number round function is used
+        r2 = Math.round(r1);
+        console.log("The random rounded number between 1 and 100 is",r2);
+    </script>
+</body>
+</html>

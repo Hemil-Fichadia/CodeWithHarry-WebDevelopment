@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Fonts</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        p{
+            /* here these fonts are stacked by comma so if one not available then it shifts to next one. these are web safe fonts which means that those are installed by default in OS and those which are not installed in OS are called web fonts and we need to import them. */
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            like here these are built in fonts in upper one but the lower one is the imported from google fonts for some adding some extra functionalities. */
+            font-family: 'Open Sans', sans-serif;
+            font-size: 23px; /* pixel is 1/96th of an inch */
+            line-height: 1.3em;
+        }
+
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Fonts</h3>
+    <p>Let's play with <span>Fonts</span>. It's very exciting</p>
+</body>
+</html>

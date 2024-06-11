@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* Universal selector */
+        /*this selector applies propeties to all the elements of the body*/
+        *{ 
+            /*This box sizing property constrains the size of the box so even if padding is increased, the content inside the box either gets shrinked or expanded but it dosen't alters the size of box that is specified */
+            box-sizing:border-box;
+            padding:0px;
+            margin:0px;
+
+        }
+        /* body selector */
+        body{
+            background-color:#b095cf;
+        }
+        /* cotainer user defined class */
+        .container{
+            background-color:rgb(177,181,199);
+            border:2px solid rgb(4,11,134);
+            /* we can set margin and padding like this  */
+            /* padding-left:29px;
+            padding-top:9px;
+            padding-left:9px;
+            padding-right:9px;
+            padding-bottom:9px; */
+
+            /* margin-left:29px;
+            margin-top:9px;
+            margin-left:9px;
+            margin-right:9px;
+            margin-bottom:9px; */
+
+            /*padding: 26px 56px  6px 78px;*/ /* padding/margin = top right bottom left; */
+            padding: 34px 19px; /* padding:y(top/bottom) x(left/right) */
+            margin:14px 19px; /* margin:y(top/bottom) x(left/right) */
+            border-radius:23px;
+            width:533px;
+            /* now if the value of padding is increased the size of box increases even if the box size is defined so box size property is used in order to make box size static even if the padding is increased the element itself gets shrunked */
+            /*box-sizing: border-box;*/ /*after giving this property the box size becomes static*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem id voluptatibus, recusandae cumque accusamus ratione aliquam velit ipsam voluptates, tempora deserunt aliquid dicta?</p>
+    </div>
+    
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem id voluptatibus, recusandae cumque accusamus ratione aliquam velit ipsam voluptates, tempora deserunt aliquid dicta?</p>
+    </div>
+    
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem id voluptatibus, recusandae cumque accusamus ratione aliquam velit ipsam voluptates, tempora deserunt aliquid dicta?</p>
+    </div>
+</body>
+</html>

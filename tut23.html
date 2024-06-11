@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar{
+            background-color:rgb(148, 231, 231);
+            border-radius:20px;  
+        }
+        .navbar ul{
+            /* As the list elements are floated left, they gets overflowed from their parent body and the background color gets eliminated from display so overflow
+            auto lets the background color gets back to its defined position.
+            */
+            overflow:auto;
+            margin:20px 10px;
+        }
+        .navbar li{
+            float:left;
+            list-style:none;
+            margin:13px 20px;
+            padding-top:5px;
+        }
+        .navbar li a{
+            padding:3px;
+            margin:10px 20px;
+            text-decoration:none;
+            color:darkmagenta;
+            font-size: 20px;
+        }
+        .navbar li a:hover{
+            color:rgb(4, 3, 77);
+        }
+        .search{
+            float:right;
+            color:darkmagenta;
+            padding: 12px 10px;
+            
+        }
+        .navbar input{
+            border:2px solid darkmagenta;
+            border-radius:10px;
+            padding:5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search this website">    
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

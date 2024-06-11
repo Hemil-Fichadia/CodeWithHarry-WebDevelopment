@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Strings and string methods</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is heading</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aut impedit, perferendis repellat nemo assumenda quasi corporis ullam. Excepturi sequi enim iusto officiis officia, eos quas dolorum! Exercitationem tenetur aperiam aliquid corrupti quibusdam rem illo esse unde enim perspiciatis perferendis, earum nemo fugiat ducimus quis.</p>
+    </div>
+    <script>
+        // var string="Hemil";
+        var string='this';
+        var name="Hemil";
+        var channel="CodewithHemil"
+        var message="Hemil is a good boy"
+        var temp=`${name} is a 'nice' person and he has a channel called ${channel}`;
+        // console.log(string + name + message);
+        console.log(temp); //string template literal
+        var len=name.length;
+        console.log(`The length of name is ${len}`);
+        console.log("Hello world\nHemil\tand how's everything\b");
+        
+        var y =new String("This");  //this is string constructor
+        console.log(y);
+        console.log("String constructor output: ",y[2]);
+
+        document.getElementById('content').innerHTML ='<h3> This is an element added with the help of javascript </h3>';
+    </script>
+</body>
+</html>

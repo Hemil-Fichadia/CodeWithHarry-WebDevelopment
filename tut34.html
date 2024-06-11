@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and Text Shadow</title>
+    <style>
+        .container{
+            display:flex;
+        }
+        .card{
+            padding:23px 12px;
+            margin:23px 12px;
+            /* border:2px solid red; */
+            background-color:burlywood;
+            /* box-shadow:5px 5px green; */
+            /* box-shadow:-5px -5px black; */
+            /* box-shadow:5px 5px 15px black; */
+            /* (box-sahdow:offset-x offset-y blur-radius spread-radius color) box shadow property parameters */
+            /* box-shadow:5px 5px 15px 8px black; */
+            /* rgba color here a is alpha which is responsible for darkness */
+            /* box-shadow:5px 7px 15px 8px rgba(1, 4, 4, 0.7); */
+            /* the above properties were for outer side of the box the inset gives effects in the inner side of the box */
+            /* box-shadow:inset 5px 5px 15px 8px green; */
+            /* in order to apply multiple effects in single property following way is used */
+            box-shadow:5px 5px green, 5px 5px red;
+        }
+        .card h2{
+            /* text-shadow:offset-x offset-y blur-radius color; */
+            text-shadow:2px 1px 4px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illo ducimus nobis incidunt odio officia. Necessitatibus incidunt dicta officia enim recusandae rerum dolorum ipsam accusamus mollitia fugiat nulla dignissimos, tempora maiores accusantium ut. Iure.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illo ducimus nobis incidunt odio officia. Necessitatibus incidunt dicta officia enim recusandae rerum dolorum ipsam accusamus mollitia fugiat nulla dignissimos, tempora maiores accusantium ut. Iure.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illo ducimus nobis incidunt odio officia. Necessitatibus incidunt dicta officia enim recusandae rerum dolorum ipsam accusamus mollitia fugiat nulla dignissimos, tempora maiores accusantium ut. Iure.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>Aout</li>
+            <li>Services</li>
+            <li>More about us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        This is another container
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+
+        let nav = document.getElementById('nav');
+        console.log(nav);
+
+        // It returns the array of HTML elements with container class
+        /* In console we can, access the elements returned by containers by command 
+        containers[index] hit enter */
+        let containers = document.getElementsByClassName('container');
+        console.log(containers);
+
+        /* The querey selector will return the first targetted selector specified by css 
+        so if there are 5 of them it will only return the one it gets first in the DOM */
+        let Qselector = document.querySelector('.container');
+        console.log("Selector returns ", Qselector);
+
+        let nav_selector = document.querySelector('#nav');
+        console.log("Selector returns ", nav_selector);
+
+        /* This query selector will return all selectors matching the specification
+         like here it is specified as id #nav>li will return element with id nav and
+         all its child li */
+        let all_selector1 = document.querySelectorAll('#nav>li');
+        console.log("selector1 returns", all_selector1);
+
+        let all_selector2 = document.querySelectorAll('.container');
+        console.log("selector1 returns", all_selector2);
+
+    </script>
+</body>
+
+</html>

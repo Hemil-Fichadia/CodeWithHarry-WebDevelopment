@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript string functions</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        var str = "This is a string";
+        console.log(str);
+
+        // First occurence of sub string
+        var position = str.indexOf('is');
+        // var position = str.indexOf(' is ');
+        console.log(position);
+
+        // Last occurence of sub string
+        position = str.lastIndexOf('is')
+        console.log(position);
+
+        // Substring from a string
+        // substr can take negative as well as positive values
+        // var substr = str.slice(1, 7);
+        // console.log("Substring using slice: ", substr); 
+        // substring can only take positive value
+        var substr = str.substring(1,7);
+        console.log("Substring using substring: ", substr);
+
+        var replaced = str.replace('string','Hemil');
+        console.log(replaced);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var newstring = str.concat(' in javascript ');
+        console.log(newstring);
+
+        var whitespaces = "    this   is  a       string      "; 
+        console.log(whitespaces);
+        // this function .trim() trims spaces from starting and ending
+        console.log(whitespaces.trim());
+
+        var char1 = str.charAt(2);
+        console.log(char1);
+        var char2 = str.charCodeAt(2);  //this shows UTF 16 character code
+        console.log(char2);
+
+        console.log(str[3]);
+        
+
+    </script>
+</body>
+</html>

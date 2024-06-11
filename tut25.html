@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        /* CSS position: static(default), absolute,relative,fixed,sticky */
+        /* Positions won't be taken into effect until the display isn't inline-block  */
+        .box{
+            display:inline-block;
+            border:2px solid red;
+            width:150px;
+            height:150px;
+            margin:2px;
+        }
+        .container{
+            border:2px solid black;
+            background-color:blanchedalmond;
+            height:2500px;
+        }
+        #box3{
+            /* relative */
+            /* relative: relative to its actual position the displacement properties are executed. so when a gap is required to its actual position, relative property is used.*/
+            /* position:relative; */
+            /* top:34px;
+            left:34px; */
+
+            /* absolute */
+            /* absolute: it shifts the element relative to its parental element position and dosen't leaves a gap, here it is container division. so when a gap is needed to be defined with respect to parental  element, absolute property is used. Here it is instructed to remain shifted from top and left   */
+            /* position:absolute;
+            top:34px;
+            left:34px;  */
+
+            /* fixed */
+            /* position fixed: this property basically floats the definedd element at the difined postion like top or bottom even when the page is been scrolled by the user. here we fix the position of the element is defined fixed with right and bottom so it floats there.  */
+            /* position:fixed;
+            right:4px;
+            bottom:4px; */
+
+            /* sticky */
+            /* The position sticky makes element float on the top most part of the web-page such a way that it sticks to its original position irrespective of 
+            scrolling of page.
+            */
+            position:sticky;
+            top:10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat with us</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

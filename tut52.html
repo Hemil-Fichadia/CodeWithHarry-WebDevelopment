@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and objects</title>
+</head>
+
+<body>
+    <div class="container">Simple HTML</div>
+    <script>
+        let myvar = 34;
+        let myvar1 = "String";
+        let myvar3 = true;
+        let myvar4 = null;
+        // let myvar5 = undifined;
+
+        // let is used oftenly due to its limited scope
+        // This is an object
+        /* The values can be accessed by giving commands in the console. so they can be 
+        mainly accessed by two ways 1) employee.name hit enter, 
+        2)employee[name] hit enter but if the key is string specified in order to have 
+        space, so only brackets method is used like employee["channel 2"] hit enter */
+        let employee ={
+            name: "Hemil",
+            salary: "Atthanni",
+            channel: "Abbe sikhne toh do",
+            // if we want to add space, double quotes are used
+            "channel 2": "Pehle ka jugaad bhi nahi hua",
+            value:223
+        }
+        console.log(employee);
+        console.log(employee.name);
+        console.log(employee.value);
+        
+        // Arrays are used to search in DOM(Dcument Object Model)
+        // Array is also an object
+        // let names =[1, 2, 3, "Hemil"];
+        // With the help of new keyword, we can create an array object explicitly
+        // let names = new Array(3, 1, 41, 2, "Hemil");
+        // console.log(names);
+        // console.log(names[1]);
+        // console.log(names.length);
+        // names = names.sort();
+        // console.log(names);
+        
+        // Here the size is limited to no. 23 so total size created is 24, 0 to 23.
+        /*push function pushes the element at the last index of the scope of the array.
+        so here the element is pushed to the 23rd index of the array and the remaining 23 
+        spaces remains empty */
+        let names = new Array(23);
+        names.push("This is pushed");
+        console.log(names);
+        console.log(names[0]);
+        console.log(names[22]);
+        console.log(names[23]);
+
+
+    </script>
+</body>
+
+</html>

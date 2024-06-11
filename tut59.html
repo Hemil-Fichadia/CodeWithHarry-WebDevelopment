@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script Dates and Time</title>
+    <style>
+        .container {
+            font-size: 23px;
+            background-color: blanchedalmond;
+            border: 2px solid grey;
+            padding: 34px;
+            margin: 4px;
+            text-align: center;
+        }
+
+        #time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Current time is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is date and time tutorial");
+        // The Date() function defaultly returns the current date and time if it is set to Date(0) it return the time of january 1 1970 5:30 AM.
+        let emerged = new Date(0);
+        console.log(emerged);
+
+        let now = new Date();
+        console.log(now);
+
+        console.log(now.getMonth()+1)
+
+        // let dt = new Date(1000);
+        // console.log(dt); 
+
+        // let newDate = new Date("2021-08-01");
+        // console.log(newDate); 
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate = new Date(3021, 7, 1, 10, 34, 25);
+        console.log(newDate);
+        // Here javascript starts counting months from 0 so here it takes 7th month as august and 8th month as september
+
+        let yr = newDate.getFullYear();
+        console.log("This year is ", yr);
+
+        let dt = newDate.getDate();
+        console.log("This is date", dt);
+
+        let month = newDate.getMonth();
+        console.log("This is month", month);
+
+        newDate.setDate(15);
+        newDate.setMinutes(23);
+        newDate.setSeconds(48);
+        console.log(newDate);
+
+        // returns a unique time stamp in milliseconds from the date of 1st january 1970 5:30 AM means the amount of milliseconds past till the time of its origin that is 1st of january 1970 5:30 AM.
+        console.log(Date.now());
+
+        setInterval(updateTime, 1000);
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Template</title>
+    <style>
+        .container{
+            display:grid;
+            grid-gap:1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar' 
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+        }
+        .item{
+            border:2px solid black;
+            background-color:cyan;
+        }
+        #navbar{
+            grid-area:navbar;
+        }
+        #section{
+            grid-area:section;
+        }
+        #aside{
+            grid-area:aside;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home About Contact Us
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, iusto recusandae? Ut quae sed quibusdam dolore unde animi consequuntur, eaque eos error ipsa. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam veniam deserunt sequi voluptates esse assumenda ratione sit! Similique praesentium odio libero molestiae et nobis. Et illum est eius labore nostrum, maxime saepe perferendis voluptatibus itaque rem nam totam distinctio iste, soluta, voluptate sequi sit magni repellendus quibusdam neque? Soluta, rem! Atque itaque iusto ipsa quaerat in optio nostrum deserunt, voluptatum, mollitia debitis non rem temporibus dolorum? Autem, mollitia fugit eum deleniti adipisci animi delectus officia accusamus, velit fuga et officiis quod perspiciatis accusantium tempore fugiat excepturi repellendus quidem laboriosam! Quos ex quia, veniam eaque asperiores expedita facere voluptatibus ipsam!
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita soluta iste a!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dicta magnam provident ratione. Deleniti recusandae veritatis exercitationem deserunt qui, tempora quae, quis velit laudantium natus excepturi sit suscipit reprehenderit eveniet ad earum ducimus perspiciatis obcaecati optio corporis in! Fugit asperiores praesentium minima minus beatae architecto ad molestias rem mollitia. Nobis fugiat autem nostrum hic quod, eius velit? Dignissimos unde cupiditate a laborum. Culpa similique labore deleniti molestiae deserunt illo aliquid sapiente eligendi aliquam nostrum porro, perspiciatis eaque perferendis tenetur nesciunt quas dicta ea facere temporibus? Vitae non officia soluta ut voluptatibus nulla, voluptas facilis mollitia, ipsum, cum et. Vero, molestias.
+        </div>
+        <!-- <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-9</div>
+        <div class="item">Item-10</div>
+        <div class="item">Item-11</div>
+        <div class="item">Item-12</div>
+        <div class="item">Item-13</div>
+        <div class="item">Item-14</div> -->
+    </div>
+    <footer class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ipsa commodi? Itaque.
+    </footer>
+</body>
+</html>

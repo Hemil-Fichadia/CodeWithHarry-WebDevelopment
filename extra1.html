@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body{
+            background-color: rgb(240, 229, 214);
+        }
+        .container {
+            animation-name:stlcontainer;
+            animation: stlcontainer 5s ease-in-out 0s forwards;
+        }
+        @keyframes stlcontainer {
+            from{
+                margin: 10px auto;
+                border: 1px solid green;
+                height: 690px;
+                width: 40vw;
+                background-color: rgb(184, 193, 241);
+                border-radius: 5px;
+                box-shadow:2px 2px 10px black;
+
+            }
+
+            to{
+
+                margin: 23px auto;
+                border: 2px solid black;
+                height: 825px;
+                width: 70vw;
+                background-color: rgb(170, 235, 235);
+                border-radius: 10px;
+                box-shadow:7px 7px 20px black;
+                /* transition: all 5s ease-in 2s; */
+
+            }
+        }
+        
+        #hed2{
+            animation-name:stlhed2;
+            animation: stlhed2 5s ease-in-out 0s forwards;
+        }
+        @keyframes stlhed2{
+            from{
+                border:1px solid black;
+                width:220px;
+                text-align: center;
+                margin: 10px auto;
+                background-color: rgb(199, 179, 218);
+                border-radius:3px;
+                text-shadow:2px 2px 4px white;
+                box-shadow:2px 2px 8px black;
+
+            }
+            to{
+                border:5px solid black;
+                width:400px;
+                text-align: center;
+                margin: 23px auto;
+                background-color: rgb(188, 135, 238);
+                border-radius:10px;
+                text-shadow:2px 2px 4px white;
+                box-shadow:5px 5px 15px black;
+
+            }
+        }
+        
+        .forms{
+            animation-name:stlforms;
+            animation: stlforms 5s ease-in-out 0s forwards;
+        }
+        @keyframes stlforms{
+            from{
+                border:1px solid rgb(109, 65, 65);
+                height:470px;
+                width:250px;
+                margin:auto;
+                background-color: rgb(188, 231, 231);
+                border-radius: 4px;
+                box-shadow:2px 2px 7px black;
+            }
+            to{
+                border:5px solid rgb(236, 86, 86);
+                height:720px;
+                width:500px;
+                margin:auto;
+                background-color: rgb(168, 253, 225);
+                border-radius: 10px;
+                box-shadow:5px 5px 15px black;
+
+            }
+        }
+
+        #hed3{
+            animation-name:stlhed3;
+            animation: stlhed3 5s ease-in-out 0s forwards;
+        }
+        @keyframes stlhed3{
+            from{
+                border:1px solid black;
+                border-radius:4px;
+                width:130px;
+                margin: 6px auto;
+                text-align: center;
+                background-color: rgb(231, 149, 149);
+                text-shadow:2px 2px 4px white;
+            }
+            to{
+                border:2px solid black;
+                border-radius:10px;
+                width:300px;
+                margin: 15px auto;
+                text-align: center;
+                background-color: rgb(231, 149, 149);
+                text-shadow:2px 2px 4px white;
+            }
+        }
+
+        .elements{
+            animation-name:stlelements;
+            animation: stlelements 6s ease-in-out 0s forwards;
+        }
+        @keyframes stlelements{
+            from{
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 4px;
+                padding: 1px 30px;
+                background-color: cadetblue;
+
+            }
+            to{
+                border: 2px solid black;
+                margin: 18px 23px;
+                border-radius: 10px;
+                padding: 3px 109px;
+                background-color: cadetblue;
+
+            }
+        }
+
+        #car{
+            padding:4px 155px;
+        }
+
+        #subres{
+            padding:4px 160px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h2 id="hed2">Recruitment Form</h2>
+        <form action="backend.php" class="forms">
+            <h3 id="hed3" >Fill up your details</h3>
+            <label for="name">
+                <div class="elements">
+                    Name:<input type="text" name="myname" id="name">
+                </div>
+            </label>
+            
+            
+            <div class="elements" id="role">
+                Role:<input type="text" name="myrole">
+            </div>
+            
+            <div class="elements" id="email">
+                Email:<input type="email" name="myemail">
+            </div>
+            
+            <div class="elements" id="date">
+                Date:<input type="date" name="mydate">
+            </div>
+            
+            <div class="elements" id="bonus">
+                Bonus:<input type="number" name="mybonus">
+            </div>
+            
+            <div class="elements" id="eligible">
+                Are you eligible:<input type="checkbox" name="eligibility">
+            </div>
+            
+            <div  class="elements" id="gen">
+                Gender:Male<input type="radio" name="mygender">Female<input type="radio" name="mygender">  
+            </div>
+            
+            <div  class="elements" id="txtar">
+                
+                Write about yourself:<textarea name="mytext" cols="20" rows="10"></textarea> 
+            </div>
+
+            <div class="elements" id="car">
+                <label for="car">Car</label>
+                <select name="mycar">
+                    <option value="ind">Indica</option>
+                    <option value="swt">Swift</option>
+                </select>
+            </div>
+            
+            <div class="elements" id="subres">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+            
+        </form>
+
+    </div>
+</body>
+</html>

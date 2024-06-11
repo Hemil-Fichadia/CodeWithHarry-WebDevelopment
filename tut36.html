@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+    <style>
+        .container {
+            background-color: greenyellow;
+        }
+
+        .box {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation-name: Hemil1;
+            /* animation-name:Hemil; */
+            animation-duration: 5s;
+            animation-iteration-count:1;
+            
+            /* animation-fill-mode:forwards; */
+            /* animation-fill-mode:backwards; */
+            /* animation-fill-mode:both; */
+            /* animation-fill-mode:inherit;  */
+            /* animation-fill-mode:initial */
+            /* there are more types of animation fill mode */
+            
+            /* the ease-out property will execute animation fast in staring and will slow down while ending */
+            /* animation-timing-function:ease-out;             */
+            /* the ease-in property will execute animation slow in starting and will end quickly */
+            /* animation-timing-function:ease-in; */
+            /* similarly ease-in-out will execute animation slow while starting and ending and fast in between */
+            /* animation-timing-function:ease-in-out; */
+
+            /* animation-delay:2s; */
+            /* animation-direction:reverse; */
+
+            /* animation short-hand   */
+            /* animation:animation-name   animation-duration   animation-timing-function animation-delay   animation-iteration-count   animation-fill-mode;  */
+            /* animation: Hemil 5s ease-in 0s 1 forwards;  */
+            animation: Hemil1 5s ease-in-out 0s initial;
+        }
+
+        /* @keyframes Hemil{
+            0%{
+                top:0px;
+                left:0px;
+            }
+            25%{
+                top:0px;
+                left:250px;
+            }
+            50%{
+                top:250px;
+                left:250px;
+            }
+            75%{
+                top:250px;
+                left:0px;
+            }
+            100%{
+                top:0px;
+                left:0px;
+            }
+        } */
+        @keyframes Hemil1 {
+
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 1000px;
+                height:400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a Box
+        </div>
+    </div>
+</body>
+
+</html>

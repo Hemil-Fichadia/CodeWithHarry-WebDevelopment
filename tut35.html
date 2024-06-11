@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties </title>
+    <style>
+        /* :root is used to access the varibles and custom properties everywhere. Kind of Global declaration  */
+        :root{
+            --primary-color:blue;
+            --secondary-color:red;
+            --box-color:green;
+            --max-width:599px;
+        }
+        .box{
+            height:100px;
+            width:100px;
+            background-color:var(--primary-color);
+            border:2px solid var(--secondary-color);
+            box-shadow:3px 3px var(--box-color);
+            margin:2px 9px;
+        }
+        .container{
+            /* now if the maxwidth is applied, the container is restricted to a certain width so margin:auto will center the container and align-items:center will center the items inside the container  */
+            max-width:var(--max-width);
+            margin:auto;
+            display:flex;
+            align-items:center;      /*it aligns items in vertivally*/
+            justify-content:center;     /* it align items in horizontally*/
+            background-color: var(--secondary-color);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
